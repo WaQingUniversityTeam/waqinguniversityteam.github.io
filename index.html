@@ -150,12 +150,18 @@
         <div class="powered-by">
             <span class="label">Powered by</span>
             <div class="logos">
-                <img src="logo1.png" alt="Logo 1" class="logo">
-                <img src="logo2.png" alt="Logo 2" class="logo">
-                <!-- 可添加更多 -->
+                <a href="https://cloudflare.com" target="_blank" rel="noopener noreferrer">
+                    <img src="pic/logo-cloudflare-dark.svg" alt="Cloudflare-Logo" class="logo">
+                </a>
+                <a href="https://company2.com" >
+                    <h3>github pages</p>
+                </a>
+                <!-- 更多Logo链接 -->
             </div>
         </div>
     </div>
+
+
 
     <style>
         .powered-by {
@@ -172,15 +178,23 @@
           gap: 12px;
         }
         
-        .logo {
-          height: 24px; /* 统一高度 */
-          width: auto;  /* 保持比例 */
-          opacity: 0.8;
-          transition: opacity 0.3s;
+        .logos a {
+          display: inline-block;  /* 让链接和图片大小一致 */
+          line-height: 0;         /* 消除底部间隙 */
         }
         
-        .logo:hover {
+        .logo {
+          height: 24px;
+          width: auto;
+          opacity: 0.8;
+          transition: all 0.3s ease;
+          border: 1px solid transparent; /* 防止布局偏移 */
+        }
+        
+        /* 鼠标悬停效果 */
+        .logos a:hover .logo {
           opacity: 1;
+          transform: translateY(-2px); /* 轻微上浮效果 */
         }
     </style>
     <script>
