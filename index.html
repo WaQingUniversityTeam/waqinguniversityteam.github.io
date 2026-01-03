@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,19 +92,21 @@
             font-size: 0.9rem;
             color: #7f8c8d;
         }
+        
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="logo">蛙青<span>大学</span></div>
-        
+
         <h1>知识无界，学海有涯</h1>
         <div class="status">🚧 网站升级中</div>
-        
+
         <p style="color: #555; line-height: 1.6; margin-bottom: 2rem;">
             网站即将上线，敬请期待！
         </p>
-        
+
         <div class="features">
             <div class="feature">
                 <h3>👥 社区交流</h3>
@@ -114,7 +117,7 @@
                 <p>从理论到实践，掌握实用技能</p>
             </div>
         </div>
-        
+
         <div class="countdown">
             <h3>预计上线时间</h3>
             <div class="timer">
@@ -124,32 +127,62 @@
                 <span id="seconds">00</span>秒
             </div>
         </div>
-        
+
         <div class="contact">
             <p style="margin-bottom: 1rem;">📍 项目地址：</p>
             <p style="margin-bottom: 1rem;">
-                <a href="https://github.com/WaQingUniversityTeam/waqinguniversityteam.github.io" 
-                   style="color: #3498db; text-decoration: none; font-weight: 500;">
-                   github.com/waqinguniversity
+                <a href="https://github.com/WaQingUniversityTeam/waqinguniversityteam.github.io" style="color: #3498db; text-decoration: none; font-weight: 500;">
+                    github.com/waqinguniversity
                 </a>
             </p>
             <p style="color: #7f8c8d; font-size: 0.9rem;">
                 邮箱：zhangxixi201268@outlook.com
             </p>
         </div>
-        
+
         <div class="copyright">
             <p>Copyleft © 2025-2026 WaQingUniversityTeam GPLv3</p>
             <p style="margin-top: 0.5rem; font-size: 0.8rem;">
                 本网站所有内容遵循 GNU 通用公共许可证第三版，允许自由使用、修改和分发
             </p>
         </div>
-        
-        <div class="copyright">
-            <h3>Powered by </h3>
-            <img src="pic/logo-cloudflare-dark.svg" alt="Cloudflare-Logo">
+
+        <div class="powered-by">
+            <span class="label">Powered by</span>
+            <div class="logos">
+                <img src="logo1.png" alt="Logo 1" class="logo">
+                <img src="logo2.png" alt="Logo 2" class="logo">
+                <!-- 可添加更多 -->
+            </div>
+        </div>
     </div>
 
+    <style>
+        .powered-by {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          color: #666;
+        }
+        
+        .logos {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        
+        .logo {
+          height: 24px; /* 统一高度 */
+          width: auto;  /* 保持比例 */
+          opacity: 0.8;
+          transition: opacity 0.3s;
+        }
+        
+        .logo:hover {
+          opacity: 1;
+        }
+    </style>
     <script>
         // 倒计时功能
         const targetDate = new Date('2026-01-30T00:00:00').getTime();
@@ -191,4 +224,5 @@
         });
     </script>
 </body>
+
 </html>
