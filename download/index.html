@@ -1,54 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Index of /</title>
-<style>
-body{font-family:monospace;margin:2em;background:#fff;color:#000}
-a{color:#00e;text-decoration:none}
-a:hover{text-decoration:underline}
-hr{border:0;border-top:1px solid #aaa}
-pre{line-height:1.6}
-</style>
+<title>files</title>
 </head>
 <body>
-<h1>Index of <span id="path">/</span></h1>
-<hr>
-<pre id="listing">Loading...</pre>
-<hr>
-<script>
-const FILES = {
-};
-const getParent=function(p){if(p==="/")return null;var a=p.split("/").filter(Boolean);a.pop();return"/"+(a.length?a.join("/")+"/":"")};
-function render(p){
-    var n=FILES[p];
-    if(!n){
-        document.getElementById("path").textContent=p;
-        document.getElementById("listing").innerHTML="404 Not Found";
-        return;
-    }
-    document.getElementById("path").textContent=p;
-    if(n.type==="dir"){
-        var h="";
-        if(p!=="/") h+='<a href="?path='+encodeURIComponent(getParent(p))+'">../</a>\n';
-        for(var i=0;i<n.children.length;i++){
-            var name=n.children[i];
-            var full=p==="/"?"/"+name:p+name;
-            h+='<a href="?path='+encodeURIComponent(full)+'">'+name+'</a>\n';
-        }
-        document.getElementById("listing").innerHTML=h;
-    }else if(n.type==="file"){
-        var d="data:text/plain;base64,"+btoa(unescape(encodeURIComponent(n.content)));
-        var fname=p.split("/").pop();
-        document.getElementById("listing").innerHTML='<a href="'+d+'" download="'+fname+'">[下载] '+fname+'</a>\n\n<pre>'+n.content.replace(/</g,"&lt;").replace(/>/g,"&gt;")+'</pre>';
-    }else if(n.type==="binary"){
-        var fname=p.split("/").pop();
-        document.getElementById("listing").innerHTML='<a href="'+encodeURIComponent(p)+'" download>'+fname+'</a> (二进制文件)';
-    }
-}
-var params=new URLSearchParams(window.location.search);
-render(params.get("path")||"/");
-</script>
+
+<pre>
+<a href="Danger.py" download>Danger.py</a>
+</pre>
+
 </body>
 </html>
